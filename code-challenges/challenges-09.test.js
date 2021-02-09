@@ -323,7 +323,11 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  const childArr = arr.filter(house => house.children);
+  // console.log(childArr);
+  const reducer = (a,b) => a + b.children.length;
+  const totalChildren = childArr.reduce(reducer, 0)
+  return totalChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -335,7 +339,13 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  const reducer = ((a,b) => {
+    a.count++;
+    a.sum += b;
+    return a
+  });
+  const data = arr.reduce(reducer,{count:0, sum: 0});
+  return data.sum/data.count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -356,7 +366,13 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  const reducer = ((a,b) => {
+    if(isPrime(b)){
+      a++
+    }
+    return a
+  })
+  return arr.reduce(reducer, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -399,7 +415,14 @@ const snorlaxData = {
 };
 
 const extractStat = (statName, arr) => {
-  // Solution code here...
+  const reducer = ((a,b) => {
+    if(a === b.stat.name){
+      return b
+      }else{
+        return a
+      }
+  });
+ return arr.reduce(reducer, statName)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -413,7 +436,12 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  // Solution code here...
+  const nameArr = arr.filter(group => group.name.includes('a') && group.children)
+  const reducer = ((a,b) =>{
+    b.children.forEach(child => a.push(child))
+    return a
+  })
+return nameArr.reduce(reducer,[])
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -478,31 +506,31 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return the average of the numbers in the array', () => {
     expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return a count of the prime numbers in the array', () => {
     expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return any stats that match the input', () => {
     expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return an array containing the names of the children', () => {
     expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
     expect(extractChildren(characters).length).toStrictEqual(10);
