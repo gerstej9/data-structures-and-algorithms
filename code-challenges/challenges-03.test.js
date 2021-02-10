@@ -240,7 +240,17 @@ const meetings = [
 ];
 
 const sortMeetingsByDay = (arr) => {
-  // Solution code here...
+  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+  arr.sort((left, right) => {
+    if(days.indexOf(left.dayOfWeek) > days.indexOf(right.dayOfWeek)){
+      return 1;
+    }else if(days.indexOf(left.dayOfWeek) < days.indexOf(right.dayOfWeek)){
+      return -1;
+    }else{
+      return 0;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -254,7 +264,29 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  // Solution code here...
+  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+  arr.sort((left, right) => {
+    if(days.indexOf(left.dayOfWeek) > days.indexOf(right.dayOfWeek)){
+      return 1;
+    }else if(days.indexOf(left.dayOfWeek) < days.indexOf(right.dayOfWeek)){
+      return -1;
+    }else{
+      if(left.start> right.start){
+        return 1;
+      }else if(left.start < right.start){
+        return -1;
+      }else{
+        if(left.end < right.end){
+          return -1;
+        }else if (left.end > right.end){
+          return 1
+        }else{
+          return 0;
+        }
+      }
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -271,7 +303,7 @@ $ = createSnippetWithJQuery(`
 `);
 
 const addPearClass = () => {
-  // Solution code here...
+  $('li:nth-of-type(3)').attr('class', 'pear');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -390,7 +422,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort meetings by the day on which they happen', () => {
     const sortedMeetings = sortMeetingsByDay(meetings);
     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
@@ -400,7 +432,7 @@ xdescribe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
@@ -413,7 +445,7 @@ xdescribe('Testing challenge 11', () => {
   });
 });
 
-xdescribe('Testing challenge 12', () => {
+describe('Testing challenge 12', () => {
   test('It should add a class of pear to the thrid li', () => {
     addPearClass();
     expect($('li:nth-child(3)').hasClass('pear')).toBe(true);
