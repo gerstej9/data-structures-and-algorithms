@@ -1,5 +1,25 @@
 # Data Structures and Algorithms
 
+# Table of Contents
+
+## 301
+* [for-each](./code-challenges/challenges-01.test.js)
+* [value-vs-reference](./code-challenges/challenges-02.test.js)
+* [sort](./code-challenges/challenges-03.test.js)
+* [regex-1](./code-challenges/challenges-04.test.js)
+* [array-methods](./code-challenges/challenges-05.test.js)
+* [objects](./code-challenges/challenges-06.test.js)
+* [map](./code-challenges/challenges-07.test.js)
+* [filter](./code-challenges/challenges-08.test.js)
+* [reduce](./code-challenges/challenges-09.test.js)
+* [regex-2](./code-challenges/challenges-10.test.js)
+* [arrays-2d](./code-challenges/challenges-11.test.js)
+* [strings](./code-challenges/challenges-12.test.js)
+* [review](./code-challenges/challenges-13.test.js)
+
+## 401
+* [array-reverse](./401/array-reverse/array-reverse.js)
+
 ## Create a copy of this repository
 
 If you have not already created your data-structures-and-algorithms repository, Please follow these steps:
@@ -39,26 +59,4 @@ If you have not already created your data-structures-and-algorithms repository, 
 
 Once this process completes, you will have a freshly setup "DS&A" folder structure on your system, and sync'd to GitHub.
 
-
 ### Mission Accomplished!
-
-
-## Repository Quick Tour and Usage
-
-### 301 Code Challenges
-
-Under the `data-structures-and-algorithms` repository, at the top level is a folder called `code-challenges`
-
-Each day, you'll add one new file to this folder to do your work for the day's assigned code challenge
-
-### 401 Data Structures, Code Challenges
-
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
-
-#### Reverse an Array
-
-#### Challenge
-* This challenge involves taking an array and returning an array this is the exact reverse of the original.
-
-#### Approach & Efficiency
-I approached this problem using a for loop and pushing the values of the original to a new array starting with the last and working backwards with an i--. This took me approximately five minutes but big 0 space/time could have taken at most 20 minutes.
