@@ -18,7 +18,8 @@
 * [review](./code-challenges/challenges-13.test.js)
 
 ## 401
-* [array-reverse](./401/array-reverse/array-reverse.js)
+* [array-reverse](./code-challenges/array-reverse/array-reverse.js)
+* [array-shift](./code-challenges/array-shift/array-shift.js)
 
 ## Create a copy of this repository
 
