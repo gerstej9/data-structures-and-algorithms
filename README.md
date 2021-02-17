@@ -20,6 +20,7 @@
 ## 401
 * [array-reverse](./code-challenges/array-reverse/array-reverse.js)
 * [array-shift](./code-challenges/array-shift/array-shift.js)
+* [array-binary-search](./code-challenges/array-binary-search/array-binary-search.js)
 
 ## Create a copy of this repository
 
