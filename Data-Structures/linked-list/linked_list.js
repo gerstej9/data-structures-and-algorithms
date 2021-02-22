@@ -15,9 +15,11 @@ class LinkedList{
   traverse() {
     let current = this.head;
 
-    while(current){
+    while(current.next){
+      console.log(current.value);
       current = current.next;
     }
+    console.log(current.value);
   }
 
   insert(value){
@@ -58,8 +60,50 @@ class LinkedList{
     }
     return finalStr += 'NULL';
   }
+
+  append(value){
+    let current = this.head;
+
+    while(current.next){
+      current = current.next;
+    }
+    current.next = new Node(value);
+  }
+
+  insertBefore(value, targetValue){
+    let current = this.head;
+    if(current.value === targetValue){
+      this.insert(value);
+    }else{
+      while(current.next.value !== targetValue){
+        current = current.next;
+      }
+      let temp = new Node(value);
+      temp.next = current.next;
+      current.next = temp;
+    }
+  }
+
+  insertAfter(value, targetValue){
+    let current = this.head;
+    while(current.value !== targetValue){
+      current = current.next;
+    }
+    let temp = new Node(value);
+    temp.next = current.next;
+    current.next = temp;
+  }
+
 }
 
+// const ll = new LinkedList;
+// ll.insert(3);
+// ll.insert(2);
+// ll.insert(1);
+// ll.append(5);
+// ll.insertBefore(6, 2);
+// ll.insertAfter(7, 3);
+// ll.traverse();
 module.exports = {
   ll: LinkedList,
   node: Node
