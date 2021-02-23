@@ -55,7 +55,7 @@ class LinkedList{
     }
     let finalStr = '';
     while(current){
-      finalStr += `{ ${current.value} } -> `
+      finalStr += `{ ${current.value} } -> `;
       current = current.next;
     }
     return finalStr += 'NULL';
@@ -94,6 +94,20 @@ class LinkedList{
     current.next = temp;
   }
 
+  kthFromEnd(k){
+    let llArray = [];
+    let current = this.head;
+    while(current){
+      llArray.push(current.value);
+      current = current.next;
+    }
+    llArray.reverse();
+    if ( k >= llArray.length || k < 0){
+      return 'Invalid Input Number';
+    }else{
+      return llArray[k];
+    }
+  }
 }
 
 // const ll = new LinkedList;
@@ -103,7 +117,9 @@ class LinkedList{
 // ll.append(5);
 // ll.insertBefore(6, 2);
 // ll.insertAfter(7, 3);
-// ll.traverse();
+// // ll.traverse();
+// ll.kthFromEnd(0);
+// ll.kthFromEnd(3);
 module.exports = {
   ll: LinkedList,
   node: Node

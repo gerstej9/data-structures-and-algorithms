@@ -1,9 +1,10 @@
 # Singly Linked List
-Code Challenge 05 and 06 for 401 Course
+Code Challenges 05, 06, and 07 for 401 Course
 
 ## Challenge
 * Challenge 05: Create three prototype functions for single linked list class; insert, include, and toString
 * Challenge 06: Create three prototype functions of linked list class; append, insert after, and insert before;
+* Challenge 07: Create a prototype function for finding the nth value from the end of a linked list
 
 ## Approach & Efficiency
 I took the approach of minimizing big O space/time by keeping my functions simplistic and focused on only what was necessary to complete the task.
@@ -22,3 +23,5 @@ Big O space is O(1) and time is O(n);
   - Insert a node with a given value before a specified node
 - .insertAfter()
   - Insert a node with a given value after a specified node;
+- .kthFromEnd()
+  - A function that finds the value kth from the end of the linked list
