@@ -14,12 +14,12 @@ class LinkedList{
 
   traverse() {
     let current = this.head;
-
+    let count = 1;
     while(current.next){
-      console.log(current.value);
+      count++;
       current = current.next;
     }
-    console.log(current.value);
+    return count;
   }
 
   insert(value){
@@ -63,11 +63,16 @@ class LinkedList{
 
   append(value){
     let current = this.head;
+    if(!current){
+      this.head = new Node(value);
+    }else{
+      while(current.next){
+        current = current.next;
+      }
+      current.next = new Node(value);
 
-    while(current.next){
-      current = current.next;
     }
-    current.next = new Node(value);
+
   }
 
   insertBefore(value, targetValue){
