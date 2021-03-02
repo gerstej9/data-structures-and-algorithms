@@ -30,7 +30,7 @@ class Stack{
     let temp = this.top;
     this.top = temp.next;
     temp.next = null;
-    return temp.value;
+    return temp;
   }
 
   peek(){
@@ -46,32 +46,27 @@ class PseudoQueue{
     this.front = new Stack();
     this.rear = new Stack();
   }
-
   enqueue(value){
-    // console.log(this);
-    if(!this.front.top){
-      this.front.push(new Node(value));
-    }else{
-      while(this.front.top !== null){
-        // console.log(this.front.top);
-        this.rear.push(this.front.top);
-        this.front.pop();
-        // console.log(this.front.top);
-      }
-      this.front.push(new Node(value));
-      console.log('first',this.rear.top);
-    }
+    this.rear.push(value);
     return this;
   }
 
+
   dequeue(){
-    if(this.front.top){
-      this.front.pop();
-    }else{
-      return 'Queue is empty';
+    while(this.rear.top){
+      let temp = this.rear.pop();
+      this.front.push(temp);
     }
+    let final = this.front.pop();
+    while(this.front.top){
+      let temp = this.front.pop();
+      this.rear.push(temp);
+    }
+    return final.value;
   }
 }
+
+
 
 // let pseudo = new PseudoQueue();
 // // pseudo.enqueue(5);
@@ -79,4 +74,6 @@ class PseudoQueue{
 // console.log('third', pseudo.rear);
 // console.log('fourth', pseudo.front);
 
-module.exports = PseudoQueue;
+module.exports = {
+  queue: PseudoQueue,
+  node: Node};

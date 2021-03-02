@@ -1,14 +1,26 @@
 'use strict';
 
-const PseudoQueue = require('../queue-with-stacks.js');
+const master = require('../queue-with-stacks');
+const Pseudo = master.queue;
+const Node = master.node;
 
 
+describe('Testing enqueue function', () => {
+  it('Should add values to the pseudoqueue', () => {
+    const pseudo = new Pseudo;
+    pseudo.enqueue(new Node(1));
+    pseudo.enqueue(new Node(2));
+    expect(pseudo.rear.top.value).toEqual(2);
+  });
+});
 
-describe('testing Queue constructor and prototype functions', () => {
-  it('should instantiate an return the value 1 ', () => {
-    const pseudo = new PseudoQueue();
-    pseudo.enqueue(1);
-    pseudo.enqueue(2);
-    expect(pseudo.front.top.value).toEqual(1);
+describe('Testing dequeue function', () => {
+  it('Should remove first value added to the pseudoqueue', () => {
+    const pseudo = new Pseudo;
+    pseudo.enqueue(new Node(1));
+    pseudo.enqueue(new Node(2));
+    pseudo.enqueue(new Node(3));
+    pseudo.enqueue(new Node(4));
+    expect(pseudo.dequeue()).toEqual(1);
   });
 });
