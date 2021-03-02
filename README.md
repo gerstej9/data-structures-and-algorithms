@@ -25,6 +25,7 @@
 * [ll-zip](./code-challenges/llZip/ll-zip.js)
 * [Stacks and Queues](./code-challenges/stacksAndQueues/stacks-and-queues.js)
 * [Queue with Stacks](./code-challenges/queueWithStacks/queue-with-stacks.js)
+* [Fifo Animal Shelter](./code-challenges/fifoAnimalShelter/fifo-animal-shelter.js)
 
 ## Create a copy of this repository
 
