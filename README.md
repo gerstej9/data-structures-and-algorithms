@@ -23,6 +23,8 @@
 * [array-binary-search](./code-challenges/array-binary-search/array-binary-search.js)
 * [linked-list](./Data-Structures/linked_list/linked_list.js)
 * [ll-zip](./code-challenges/llZip/ll-zip.js)
+* [Stacks and Queues](./code-challenges/stacksAndQueues/stacks-and-queues.js)
+* [Queue with Stacks](./code-challenges/queueWithStacks/queue-with-stacks.js)
 
 ## Create a copy of this repository
 
