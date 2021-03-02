@@ -57,7 +57,7 @@ class PseudoQueue{
       let temp = this.rear.pop();
       this.front.push(temp);
     }
-    let final = this.front.top;
+    let final = this.front.pop();
     while(this.front.top){
       let temp = this.front.pop();
       this.rear.push(temp);
