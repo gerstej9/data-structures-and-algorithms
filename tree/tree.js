@@ -61,6 +61,25 @@ class Tree {
     inOrderHelper(current);
     return array;
   }
+
+  findMaximumValue(){
+    let max = 0;
+    const preOrderHelper = (node) => {
+      if(node.value > max){
+        max = node.value;
+      }
+      if (node.left) {
+        preOrderHelper(node.left);
+      }
+      if (node.right) {
+        preOrderHelper(node.right);
+      }
+    };
+
+    let current = this.root;
+    preOrderHelper(current);
+    return max;
+  }
 }
 
 class BinarySearchTree {
@@ -123,19 +142,20 @@ const bst = new BinarySearchTree();
 // console.log(bst.contains(15));
 const tree = new Tree();
 
-tree.root = new Node('A');
-tree.root.left = new Node('B');
-tree.root.left.left = new Node('D');
-tree.root.left.right = new Node('E');
-tree.root.right = new Node('C');
-tree.root.right.left = new Node('F');
+tree.root = new Node(5);
+tree.root.left = new Node(10);
+tree.root.left.left = new Node(20);
+tree.root.left.right = new Node(2);
+tree.root.right = new Node(4);
+tree.root.right.left = new Node(17);
 
-console.log('Pre');
-console.log(tree.preOrder());
-console.log('In');
-console.log(tree.inOrder());
-console.log('Post');
-console.log(tree.postOrder());
+// console.log('Pre');
+// console.log(tree.preOrder());
+// console.log('In');
+// console.log(tree.inOrder());
+// console.log('Post');
+// console.log(tree.postOrder());
+console.log(tree.findMaximumValue());
 
 module.exports= {
   tree: Tree,
