@@ -80,6 +80,23 @@ class Tree {
     preOrderHelper(current);
     return max;
   }
+  breadthFirst(){
+    let current = null;
+    let queue = [];
+    let treeArray = [];
+    queue.unshift(this.root);
+    while(queue.length){
+      current = queue.pop();
+      treeArray.push(current.value);
+      if(current.left){
+        queue.unshift(current.left);
+      }
+      if(current.right){
+        queue.unshift(current.right);
+      }
+    }
+    return treeArray;
+  }
 }
 
 class BinarySearchTree {
@@ -124,38 +141,20 @@ class BinarySearchTree {
   }
 }
 
-const bst = new BinarySearchTree();
 
-// bst.root = new Node(10);
-// bst.root.left = new Node(7);
-// bst.root.left.left = new Node(5);
-// bst.root.left.right = new Node(9);
-// bst.root.right = new Node(13);
-// bst.root.right.left = new Node(11);
+// const tree = new Tree();
 
-// console.log(bst.contains(15));
+// tree.root = new Node(2);
+// tree.root.left = new Node(7);
+// tree.root.left.left = new Node(2);
+// tree.root.left.right = new Node(6);
+// tree.root.left.right.left = new Node(5);
+// tree.root.left.right.right = new Node(11);
+// tree.root.right = new Node(5);
+// tree.root.right.right = new Node(9);
+// tree.root.right.right.left = new Node(4);
+// console.log(tree.breadthFirst());
 
-// console.log(bst.contains(2));
-
-// bst.add(15);
-// console.log(bst);
-// console.log(bst.contains(15));
-const tree = new Tree();
-
-tree.root = new Node(5);
-tree.root.left = new Node(10);
-tree.root.left.left = new Node(20);
-tree.root.left.right = new Node(2);
-tree.root.right = new Node(4);
-tree.root.right.left = new Node(17);
-
-// console.log('Pre');
-// console.log(tree.preOrder());
-// console.log('In');
-// console.log(tree.inOrder());
-// console.log('Post');
-// console.log(tree.postOrder());
-console.log(tree.findMaximumValue());
 
 module.exports= {
   tree: Tree,

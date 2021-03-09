@@ -1,5 +1,5 @@
 # Trees
-Code Challenge 15 & 16
+Code Challenge 15, 16 & 17
 
 ## Challenge
 ### 15
@@ -7,13 +7,18 @@ Code Challenge 15 & 16
 * Create a class for a binary search tree with a constructor function and add and contains methods
 ### 16
 * Create a method function that will find the maximum value on any given tree
+### 17
+* Create a breadth first traversal method for your tree class
 
 ## Approach & Efficiency
 ### 15
 I took the approach of trying to utilize recursive functions to traverse the tree and search the binary search tree
 
 ### 16
-I utilized the traverse method coupled with a comparator function to find the maximum value.
+I utilized the traverse method coupled with a comparator function to find the maximum value
+
+### 17
+I utilized a queue to traverse the tree by level in a breadth first approach
 
 ## API
 * Tree Pre-Order traversal utilizes root - left - right order
@@ -22,3 +27,4 @@ I utilized the traverse method coupled with a comparator function to find the ma
 * Tree maximum value function utilizes pre-order traversal and returns maximum value
 * BST add method uses recursive function to compare left and right values and adds a new node at appropriate spot
 * BST contains method uses a while loop and comparatiive function to move through the tree until it hits the target value or a null value and returns true or false
+* Tree breadth-first traversal utilizes a queue to traverse the tree by level
