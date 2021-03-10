@@ -28,6 +28,8 @@
 * [Fifo Animal Shelter](./code-challenges/fifoAnimalShelter/fifo-animal-shelter.js)
 * [Multi-Bracket Validation](./code-challenges/multiBracketValidation/multi-bracket-validation.js)
 * [Trees](./tree/tree.js)
+* [Fizz Buzz Tree](./code-challenges/fizzBuzzTree/fizz-buzz-tree.js)
+
 
 ## Create a copy of this repository
 
