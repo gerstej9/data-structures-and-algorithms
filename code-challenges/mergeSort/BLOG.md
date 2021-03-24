@@ -13,3 +13,6 @@
 * On the right hand side we have a comparison of the first two components 16 and 42 yielding [16, 42].
 * This is followed by the comparison of 15 to this newly formed unit giving us [15, 16, 42]
 * Lastly the two halves are compared and we end with [4, 8, 15, 16, 23, 42] or in other words our input array is returned as a sorted array.
+
+
+

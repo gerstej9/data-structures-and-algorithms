@@ -1,4 +1,4 @@
-# Insertion Sort 
+# Merge Sort 
 Code Challenge 27 of Code Fellows Class 401
 
 ## Challenge
