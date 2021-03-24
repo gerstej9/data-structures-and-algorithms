@@ -31,6 +31,7 @@
 * [Fizz Buzz Tree](./code-challenges/fizzBuzzTree/fizz-buzz-tree.js)
 * [Insertion Sort](./code-challenges/insertionSort/BLOG.md)
 * [Merge Sort](./code-challenges/mergeSort/BLOG.md)
+* [Merge Sort](./code-challenges/quickSort/BLOG.md)
 
 
 ## Create a copy of this repository
