@@ -34,6 +34,7 @@
 * [Quick Sort](./code-challenges/quickSort/BLOG.md)
 * [Hash Table](./code-challenges/hashTable/hashTable.js)
 * [Repeated Word](./code-challenges/repeated-word/repeatedWord.js)
+* [Tree Intersection](./code-challenges/treeIntersection/treeIntersection.js)
 
 
 ## Create a copy of this repository
