@@ -35,6 +35,7 @@
 * [Hash Table](./code-challenges/hashTable/hashTable.js)
 * [Repeated Word](./code-challenges/repeated-word/repeatedWord.js)
 * [Tree Intersection](./code-challenges/treeIntersection/treeIntersection.js)
+* [Left Join](./code-challenges/leftJoin/leftJoin.js)
 
 
 ## Create a copy of this repository
