@@ -1,4 +1,4 @@
-# Queue with Stacks
+# Hash table
 Code Challenge 30 of Code Fellows Class 401
 
 ## Challenge
