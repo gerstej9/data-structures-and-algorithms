@@ -36,6 +36,7 @@
 * [Repeated Word](./code-challenges/repeated-word/repeatedWord.js)
 * [Tree Intersection](./code-challenges/treeIntersection/treeIntersection.js)
 * [Left Join](./code-challenges/leftJoin/leftJoin.js)
+* [Graph](./code-challenges/graph/graph.js)
 
 
 ## Create a copy of this repository
