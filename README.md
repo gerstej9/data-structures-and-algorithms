@@ -37,6 +37,7 @@
 * [Tree Intersection](./code-challenges/treeIntersection/treeIntersection.js)
 * [Left Join](./code-challenges/leftJoin/leftJoin.js)
 * [Graph](./code-challenges/graph/graph.js)
+* [Breadth First Graph](./code-challenges/breadthFirst/breadthFirst.js)
 
 
 ## Create a copy of this repository
