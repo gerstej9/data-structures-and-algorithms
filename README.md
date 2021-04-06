@@ -38,6 +38,7 @@
 * [Left Join](./code-challenges/leftJoin/leftJoin.js)
 * [Graph](./code-challenges/graph/graph.js)
 * [Breadth First Graph](./code-challenges/breadthFirst/breadthFirst.js)
+* [Get Edges](./code-challenges/getEdges/getEdges.js)
 
 
 ## Create a copy of this repository
