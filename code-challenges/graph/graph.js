@@ -77,7 +77,7 @@ class Graph{
     visitedVertices.add(vertex);
     const traverse = (current, visited) => {
 
-      visited.add(current);
+      visitedVertices.add(current);
 
       const neighbors = this.getNeighbors(current);
 

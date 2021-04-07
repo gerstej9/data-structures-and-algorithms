@@ -1,5 +1,5 @@
 # Graphs
-Code Challenge 35 of Code Fellows Class 401
+Code Challenge 35 & Code Challenge 38 of Code Fellows Class 401
 
 ## Challenge
 * Create a Graph class that is able to construct a graph with several prototype functions listed below

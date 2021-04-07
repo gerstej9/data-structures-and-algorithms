@@ -39,6 +39,7 @@
 * [Graph](./code-challenges/graph/graph.js)
 * [Breadth First Graph](./code-challenges/breadthFirst/breadthFirst.js)
 * [Get Edges](./code-challenges/getEdges/getEdges.js)
+* [Depth First Graph Traversal](./code-challenges/graph/graph.js)
 
 
 ## Create a copy of this repository
