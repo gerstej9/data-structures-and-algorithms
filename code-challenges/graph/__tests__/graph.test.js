@@ -71,4 +71,40 @@ describe('Testing graph prototype functionality', () => {
   });
 });
 
+describe('Testing graph depth first traversal functionality', () => {
 
+  let test = new Graph();
+
+
+  let one = new Vertex('A');
+  let two = new Vertex('B');
+  let three = new Vertex('C');
+  let four = new Vertex('D');
+  let five = new Vertex('E');
+  let six = new Vertex('F');
+  let seven = new Vertex('G');
+  let eight = new Vertex('H');
+
+  test.addNode(one);
+  test.addNode(two);
+  test.addNode(three);
+  test.addNode(four);
+  test.addNode(five);
+  test.addNode(six);
+  test.addNode(seven);
+  test.addNode(eight);
+
+  test.addEdge(one, two);
+  test.addEdge(one, four);
+  test.addEdge(two, four);
+  test.addEdge(two, three);
+  test.addEdge(two, seven);
+  test.addEdge(four, five);
+  test.addEdge(four, six);
+  test.addEdge(four, eight);
+  test.addEdge(six, eight);
+
+  it('Should retrieve all the nodes from the graph', () => {
+    expect(Array.from(test.depthFirst(one))).toEqual([one, two, four, five, six, eight, three, seven]);
+  });
+});
